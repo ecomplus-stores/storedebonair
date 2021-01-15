@@ -1,23 +1,23 @@
 {
-  "store_id": 1217,
-  "name": "storedebonair",
   "domain": "storedebonair.netlify.app",
-  "short_name": "storedebonair",
-  "description": "storedebonair",
+  "currency_symbol": "R$",
   "primary_color": "#222831",
-  "secondary_color": "#393e46",
-  "bg_color": "#ffffff",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
-  "logo": "/img/uploads/logo.png",
-  "mini_logo": "",
-  "icon": "/img/icon.png",
-  "large_icon": "/img/large-icon.png",
-  "favicon": "/img/uploads/favicon.png",
+  "bg_color": "#ffffff",
+  "logo": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png",
+  "name": "Debonair",
+  "short_name": "Debonair",
   "lang": "pt_br",
   "currency": "BRL",
-  "currency_symbol": "R$",
-  "country_code": "BR"
+  "mini_logo": "",
+  "favicon": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png",
+  "country_code": "BR",
+  "secondary_color": "#393e46",
+  "icon": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png",
+  "store_id": 1217,
+  "description": "storedebonair",
+  "large_icon": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png"
 }
