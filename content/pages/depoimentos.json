@@ -1,0 +1,20 @@
+{
+  "body": "Veja o que dizem nossos clientes!",
+  "sections": [
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/0df7b2214c4f29470e2a8f8f5f6f2225.jpeg"
+        },
+        {
+          "img": "/img/uploads/50c14882baab04501f0b26009d5b3fb5.jpeg"
+        },
+        {
+          "img": "/img/uploads/3ab55cdbd1b7d95ae11893b0f8cadd48.jpeg"
+        }
+      ]
+    }
+  ],
+  "title": "Depoimentos"
+}
