@@ -7,17 +7,17 @@
     "custom": "_"
   },
   "bg_color": "#ffffff",
-  "logo": "/img/uploads/spigen-logo.png",
+  "logo": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png",
   "name": "Debonair",
   "short_name": "Debonair",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
-  "favicon": "https://assets.xtechcommerce.com/uploads/logos/8810cfc0ce9605a81cdbd0cb8313cd26.png",
+  "favicon": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png",
   "country_code": "BR",
   "secondary_color": "#393e46",
-  "icon": "https://assets.xtechcommerce.com/uploads/logos/8810cfc0ce9605a81cdbd0cb8313cd26.png",
+  "icon": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png",
   "store_id": 1217,
   "description": "storedebonair",
-  "large_icon": "https://assets.xtechcommerce.com/uploads/logos/8810cfc0ce9605a81cdbd0cb8313cd26.png"
+  "large_icon": "/img/uploads/8810cfc0ce9605a81cdbd0cb8313cd26.png"
 }
