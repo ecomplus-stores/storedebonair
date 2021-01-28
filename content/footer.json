@@ -6,28 +6,49 @@
   "links_1": {
     "list_pages": true,
     "title": "Páginas",
-    "list": []
+    "list": [
+      {
+        "text": "Quem somos",
+        "url": "/pages/quem-somos"
+      },
+      {
+        "text": "Política de compra",
+        "url": "/pages/politica-de-compra"
+      },
+      {
+        "text": "Depoimentos",
+        "url": "/pages/depoimentos"
+      }
+    ]
   },
   "links_2": {
     "list_categories": true,
-    "title": "Categorias",
-    "list": []
+    "title": "Ajuda & Suporte",
+    "list": [
+      {
+        "text": "Como comprar",
+        "url": "/pages/como-comprar"
+      },
+      {
+        "text": "Contato",
+        "url": "/pages/contato"
+      }
+    ]
   },
   "contacts": {
     "title": "Contatos",
-    "phone_wpp": true,
-    "socials": true,
-    "email": true,
+    "phone_wpp": false,
+    "socials": false,
+    "email": false,
     "address": true
   },
   "stamps": [
     {
-      "src": "/img/uploads/ssl-safe.png",
-      "alt": "Secure connection"
+      "src": "/img/uploads/ico_ssl.png"
     }
   ],
   "payment_methods": {
-    "bb": true,
+    "bb": false,
     "visa": true,
     "boleto": true,
     "aura": false,
@@ -35,12 +56,14 @@
     "elo": true,
     "hipercard": false,
     "hsbc": false,
-    "bradesco": true,
+    "bradesco": false,
     "santander": false,
     "mastercard": true,
     "citibank": false,
+    "diners": true,
     "mais": false,
-    "itau": true
+    "amex": true,
+    "itau": false
   },
-  "credits": ""
+  "credits": "© 2021 Debonair. Todos os direitos reservados."
 }
