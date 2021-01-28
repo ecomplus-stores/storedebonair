@@ -3,39 +3,28 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "banner-slider",
-      "autoplay": 9000,
-      "slides": [
+      "type": "responsive-banner",
+      "img": "/img/uploads/5c3d0f52c109c7fbcde805aabbba95eb.gif"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
         {
-          "img": "/img/uploads/rect89.webp",
-          "link": "/headset",
-          "alt": "Headset banner",
-          "start": "2020-04-11T05:54:06.750Z",
-          "end": "2020-12-31T03:00:00.000Z"
+          "img": "/img/uploads/91877e38100cc3b5b06d5b3bb82f0092.png"
         },
         {
-          "img": "/img/uploads/banner2.webp",
-          "alt": "Banner sample two",
-          "start": "",
-          "end": ""
+          "img": "/img/uploads/5e3e7253cd77df473fbf0d75cd3c4ec0.png"
+        },
+        {
+          "img": "/img/uploads/aa66024b06e06b9cfd3be26e26630acd.png"
+        },
+        {
+          "img": "/img/uploads/c3412d45ceab5f4cf5da418ff05c4adb.png"
+        },
+        {
+          "img": "/img/uploads/2931ddc87540f5bd51e36440f836b717.png"
         }
       ]
-    },
-    {
-      "type": "info-bar",
-      "enabled": true
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "collection_id": null,
-      "limit": 12,
-      "page": 1
-    },
-    {
-      "type": "page-title",
-      "title": "Loja demo da E-Com Plus",
-      "description": "Loja de demonstração e testes da plataforma E-Com Plus e Storefront. Todos os produtos, preços e informações são meramente ilustrativos."
     }
   ]
 }
