@@ -1,1 +1,205 @@
 // Add your custom CSS here.
+@media(min-width:1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl{width:1230px;}
+    .header__toggler{display:none}
+}
+@import url('https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap');
+div, span, p, h1, h2, h3, h4, h5, h6 {
+    font-family: Sintony;
+}
+footer{background-color: #393939;}
+footer h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 10px;
+    color:#fff;
+    font-family: Sintony;
+    text-align:center
+}
+footer .links h4{text-align:left}
+footer .links ul {
+    padding: 0;
+    list-style: none;
+}
+footer .links ul li {
+    padding-bottom: 3px;
+    padding-left: 10px;
+    transition: all .2s linear;
+    color:#fff;
+}
+footer .links ul li:before {
+    content: "\f0da";
+    font-size: 11px;
+    font-family: fontAwesome;
+}
+footer .links ul li a {
+    font-size: 11px;
+    padding-left: 3px;
+    color:#fff;
+    text-decoration:none
+}
+footer .links ul li:hover {
+    padding-left: 15px;
+}
+
+footer .logo {
+    margin-bottom: 30px;
+    filter: invert(100%);
+}
+
+.d_newsletter > p{
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+}
+.d_newsletter > form {
+    width: 80%;
+    margin: 0 auto;
+}
+.d_newsletter form input {
+    border: 0px;
+    height: 34px;
+    font-size: 12px;
+    border-radius:0;
+}
+.d_newsletter  form button {
+    background: #000;
+    color: #fff;
+    height: 34px;
+    border-radius: 0px;
+    text-transform: lowercase;
+    border: 4px solid #fff;
+    padding: 0 6px;
+    width: 36px;
+    font-size: 13px;
+}
+footer .stamps{justify-content:center}
+
+.justify-content-end{justify-content:flex-end}
+
+footer .social a i{
+    font-size: 1.3333333em;
+    display: inline-block;
+    line-height: 26px;
+}
+footer .social a{
+    margin-left:10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    transition: color .2s;
+    background: #fff;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 50%;
+    text-decoration:none;
+}
+.footer__credits{
+    background: #fff;
+    margin: 0;
+    font-size: 11px;
+    text-align: center;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.justify-content-between{justify-content: space-between;}
+.align-items-center{align-items:center}
+#cart-button{}
+#cart-button > img{
+    height: 27px!important;
+    width: 31px!important;
+}
+#cart-button > span{
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #000;
+    text-align:left;
+    margin-left:10px;
+}
+#cart-button > span b{}
+#cart-button > span span{
+    position:relative;
+}
+#user-button{
+    // border-right: 1px solid #000;
+    border-radius: 0;
+    margin-right: 10px;
+    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.header__logo{max-height: unset;}
+
+.header{
+    background: #fff;
+    padding: 0;
+    border: 0;
+}
+.header__nav{
+    background: #000;
+    margin: 0 -15px;
+}
+.header__nav > a{
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 15px 30px;
+    color:#fff;
+    font-weight:600;
+    margin:0;
+}
+.header__nav > a:hover{
+    background: #393939!important;
+    border-radius: 0;
+}
+
+#search-bar{}
+#search-bar [type="search"]{
+    font-size: 12px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #777!important;
+    border-radius: 0;
+    width: calc(100% - 88px);
+    display: inline-block!important;
+    vertical-align: middle;
+}
+#search-bar [type="submit"]{
+    position: relative;
+    top: auto;
+    bottom: auto;
+    padding: 0px 15px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 3px;
+    background: #000;
+    line-height: 30px;
+}
+
+#top-user{
+    font-size: 10px;
+    color: #1e1e1e;
+    display: block;
+}
+#top-user a{text-decoration: underline;}
+
+#top-links{}
+#top-links ul{list-style-type:none;    list-style-type: none;
+    margin: 0;}
+#top-links ul li{display:inline-block;vertical-align:middle;}
+#top-links ul li:last-child{border-left:1px solid #000;padding-left:1.4rem}
+#top-links ul li a{
+    font-size: 10px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 8px;
+}
+
+.header .social a{margin-left:5px;}
+.header__container{margin:0}

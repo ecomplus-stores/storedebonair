@@ -1,48 +1,6 @@
 {
-  "1_txt": "Compra 100% Segura",
-  "2_txt": "Frete Fixo R$ 9,90",
-  "lista": [
-    {
-      "itens_obj": {
-        "txt__": "Compra 100% Segura",
-        "img__": "/img/uploads/656498bf7d4e88e755d0294b78b6936b.png"
-      }
-    },
-    {
-      "itens_obj": {
-        "txt__": "Frete Fixo R$ 9,90",
-        "img__": "/img/uploads/0b8f5acf237af795d64d1a4d393839a7.png"
-      }
-    },
-    {
-      "itens_obj": {
-        "txt__": "Entrega via Correios",
-        "img__": "/img/uploads/78f408801755b62bbdb426306006079c.png"
-      }
-    },
-    {
-      "itens_obj": {
-        "txt__": "Troca Grátis",
-        "img__": "/img/uploads/65c8d7dd1ffa76f35d43dadf0b84a5e4.png"
-      }
-    },
-    {
-      "itens_obj": {
-        "txt__": "Frete Grátis acima de R$ 299,90",
-        "img__": "/img/uploads/0b8f5acf237af795d64d1a4d393839a7.png"
-      }
-    }
-  ],
-  "3_txt": "Entrega via Correios",
-  "4_txt": "Troca Grátis",
-  "5_txt": "Frete Grátis acima de R$ 299,90",
   "stripe_color": "#393939",
-  "text_color": "#ffffff",
-  "1_img": "/img/uploads/656498bf7d4e88e755d0294b78b6936b.png",
-  "2_img": "/img/uploads/b0516453e089f69c1d2dca1105e9a28c.png",
-  "3_img": "/img/uploads/78f408801755b62bbdb426306006079c.png",
-  "4_img": "/img/uploads/65c8d7dd1ffa76f35d43dadf0b84a5e4.png",
-  "5_img": "/img/uploads/0b8f5acf237af795d64d1a4d393839a7.png",
+  "text_color": "#ffffff",  
   "list": [
     {
       "item": {

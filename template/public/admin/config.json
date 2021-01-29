@@ -4,5 +4,55 @@
     "branch": "master",
     "identity_url": "https://gotrue.ecomplus.biz/1217/.netlify/identity",
     "gateway_url": "https://gitgateway.ecomplus.biz/1217/.netlify/git"
-  }
+  },
+  "collections": [
+    {
+      "label" : "alpix.dev",
+      "name": "alpix",
+      "files": [
+        {
+          "name": "a_tarja_topo",
+          "label": "Tarja topo",
+          "file": "content/a_tarta_topo.json",
+          "fields": [
+            {
+              "label": "Cor da tarja",
+              "name": "stripe_color",
+              "widget": "color"
+            },
+            {
+              "label": "Cor do texto",
+              "name": "text_color",
+              "widget": "color"
+            },           
+            {
+              "label":"Itens da Tarja",
+              "name":"list",
+              "widget" : "list",
+              "fields" : [
+                {
+                  "label": "Itens Block",
+                  "name": "item",
+                  "widget": "object",
+                  "summary" : "",
+                  "fields" : [
+                    {
+                      "label": "Texto",
+                      "name": "text",
+                      "widget": "string"
+                    },
+                    {
+                      "label": "Imagem",
+                      "name": "image",
+                      "widget": "image"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -12,210 +12,171 @@ const networksWithColors = [
   ['pinterest', '#bd081c'],
   ['linkedin', '#0073b1']
 ]
-%>
 
-<footer class="footer py-3 py-lg-4 py-xl-5">
+// store logo object
+const logo = _.settings.logo
+  ? { url: _.settings.logo, alt: _.settings.name }
+  : _.store.logo
+
+const header = _.cms('header') || {}
+// social networks handled by contacts
+const networks = [
+  'facebook',
+  'youtube',
+  'instagram',
+  'twitter',
+  'pinterest',
+  'linkedin'
+]
+%>
+<footer class="py-5">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-lg-auto order-lg-last">
-        <div class="footer__contacts">
-          <% if (footer.contacts.title) { %>
-            <div class="footer__title">
-              <%= footer.contacts.title %>
+      <div class="col-12 col-md-5">
+        <div class="row">
+          <div class="col-12 col-md-5 links">
+            <div class="mb-5">
+              <% if (logo && logo.url) { %>
+                <img
+                  class="logo"
+                  src="<%= logo.url %>"
+                  alt="<%= logo.alt %>"
+                >
+              <% } else { %>
+                <%= _.settings.name || _.store.name %>
+              <% } %>
+              <h4><%= footer.links_1.title || _.dictionary('pages') %></h4>
+              <% if (footer.links_1.list_pages) { %>
+                <ul class="footer__links">
+                  <% (_.cms('pages') || []).forEach(slug => { %>
+                    <% const { title } = _.cms(`pages/${slug}`) %>
+                    <li>
+                      <a href="/pages/<%= slug %>">
+                        <%= title %>
+                      </a>
+                    </li>
+                  <% }) %>
+                </ul>
+              <% } else { %>
+                <ul class="footer__links">
+                  <% footer.links_1.list.forEach(({ url, text }) => { %>
+                    <li>
+                      <a href="<%= url %>">
+                        <%= text %>
+                      </a>
+                    </li>
+                  <% }) %>
+                </ul>
+              <% } %>
             </div>
-          <% } %>
-
-          <ul class="list-unstyled">
-            <% if (footer.contacts.phone_wpp) { %>
-              <% if (contacts.whatsapp) { %>
-                <li>
-                  <span class="footer__list-icon">
-                    <i class="fab fa-whatsapp"></i>
-                  </span>
-                  <a
-                    href="javascript:;"
-                    target="_blank"
-                    rel="noopener"
-                    class="whatsapp-link"
-                    data-tel="<%= contacts.whatsapp.replace(/\D/g, '') %>"
-                  >
-                    <%= contacts.whatsapp %>
-                  </a>
-                </li>
+            <div class="mb-5">
+              <h4><%= footer.links_2.title || _.dictionary('categories') %></h4>
+              <% if (footer.links_2.list_categories) { %>
+                <ul class="footer__links">
+                  <% _.categories.forEach(({ name, slug, parent }) => { %>
+                    <% if (!parent) { %>
+                      <li>
+                        <a href="/<%= slug %>">
+                          <%= name %>
+                        </a>
+                      </li>
+                    <% } %>
+                  <% }) %>
+                </ul>
+              <% } else { %>
+                <ul class="footer__links">
+                  <% footer.links_2.list.forEach(({ url, text }) => { %>
+                    <li>
+                      <a href="<%= url %>">
+                        <%= text %>
+                      </a>
+                    </li>
+                  <% }) %>
+                </ul>
               <% } %>
-              <% if (contacts.phone) { %>
-                <li>
-                  <span class="footer__list-icon">
-                    <i class="fas fa-phone"></i>
-                  </span>
-                  <a
-                    href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <%= contacts.phone %>
-                  </a>
-                </li>
-              <% } %>
-            <% } %>
-            <% if (footer.contacts.email) { %>
-              <li>
-                <a href="mailto:<%= contacts.email %>" target="_blank" rel="noopener">
-                  <%= contacts.email %>
-                </a>
-              </li>
-            <% } %>
-            <% if (footer.contacts.address) { %>
-              <li>
-                <address>
-                  <%= contacts.address %>
-                </address>
-              </li>
-            <% } %>
-          </ul>
-
-          <% if (footer.contacts.socials) { %>
-            <p class="footer__social">
-              <% networksWithColors.forEach(([network, color]) => { %>
-                <% if (contacts[network]) { %>
-                  <a
-                    href="<%= contacts[network] %>"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="<%= network %>"
-                    style="color: <%= color %>"
-                  >
-                    <i class="fab fa-<%= network %>"></i>
-                  </a>
-                <% } %>
-              <% }) %>
-            </p>
-          <% } %>
+            </div>
+          </div>
+          <div class="col-12 col-md-7">
+            <h4>Formas de Pagamento</h4>
+            <div class="mb-5">
+              <p class="footer__payment-methods">
+                <% Object.keys(footer.payment_methods).forEach(method => { %>
+                  <% if (footer.payment_methods[method]) { %>
+                    <i class="pay-icon pay-icon--<%= method %>"></i>
+                  <% } %>
+                <% }) %>
+              </p>
+            </div>
+            
+           
+          </div>
         </div>
       </div>
+      <div class="col-12 col-md-7">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="mb-5 d_newsletter">
+              <h4>Newsletter</h4>
+              <p>
+                Quer receber com exclusividade nossas
+                novidades e promoções? Cadastre-se!
+              </p>
+              <form action="" method="post" accept-charset="utf-8">
+                <div class="input-group">
+                  <input type="text" name="email" id="newsletter" placeholder="Insira seu e-mail" class="form-control">
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-sub">
+                      Ok
+                    </button>
+                  </span>
+                </div>
+              </form>
+            </div>
+            <div class="mb-5">
+              <h4>Segurança</h4>
+              <div class="footer__stamps">
+                <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <h4>Redes Sociais</h4>
+            <div class="mb-3">
+              <div class="col-xs-12 fb_widget">
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1699200170300370";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
 
-      <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-pages"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-pages"
-        >
-          <%= footer.links_1.title || _.dictionary('pages') %>
-        </a>
-        <div class="collapse" id="footer-pages">
-          <% if (footer.links_1.list_pages) { %>
-            <ul class="footer__links">
-              <% (_.cms('pages') || []).forEach(slug => { %>
-                <% const { title } = _.cms(`pages/${slug}`) %>
-                <li>
-                  <i class="fas fa-angle-right"></i>
-                  <a href="/pages/<%= slug %>">
-                    <%= title %>
-                  </a>
-                </li>
-              <% }) %>
-            </ul>
-          <% } else { %>
-            <ul class="footer__links">
-              <% footer.links_1.list.forEach(({ url, text }) => { %>
-                <li>
-                  <i class="fas fa-angle-right"></i>
-                  <a href="<%= url %>">
-                    <%= text %>
-                  </a>
-                </li>
-              <% }) %>
-            </ul>
-          <% } %>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg">
-        <a
-          class="footer__title"
-          data-toggle="collapse"
-          href="#footer-categories"
-          role="button"
-          aria-expanded="false"
-          aria-controls="footer-categories"
-        >
-          <%= footer.links_2.title || _.dictionary('categories') %>
-        </a>
-        <div class="collapse" id="footer-categories">
-          <% if (footer.links_2.list_categories) { %>
-            <ul class="footer__links">
-              <% _.categories.forEach(({ name, slug, parent }) => { %>
-                <% if (!parent) { %>
-                  <li>
-                    <i class="fas fa-angle-right"></i>
-                    <a href="/<%= slug %>">
-                      <%= name %>
+                <div class="fb-page fb_iframe_widget" data-href="http://www.facebook.com/StoreDebonair" width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=&amp;container_width=320&amp;hide_cover=false&amp;href=http%3A%2F%2Fwww.facebook.com%2FStoreDebonair&amp;locale=pt_BR&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;width=500"><span style="vertical-align: bottom; width: 320px; height: 70px;"><iframe name="f5f541e857911" width="500px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.12/plugins/page.php?adapt_container_width=true&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df8b109d36c4b48%26domain%3Dwww.debonair.com.br%26origin%3Dhttps%253A%252F%252Fwww.debonair.com.br%252Ff54f0107734ec%26relation%3Dparent.parent&amp;container_width=320&amp;hide_cover=false&amp;href=http%3A%2F%2Fwww.facebook.com%2FStoreDebonair&amp;locale=pt_BR&amp;sdk=joey&amp;show_facepile=true&amp;small_header=true&amp;width=500" style="border: none; visibility: visible; width: 320px; height: 70px;" class=""></iframe></span></div>
+                </div>  
+            </div>
+            <div class="d-flex justify-content-end align-items-center row social">
+              <% if (header.contacts_stripe.socials) { %>
+                <% networks.forEach(network => { %>
+                  <% if (contacts[network]) { %>
+                    <a href="<%= contacts[network] %>" target="_blank" rel="noopener">
+                      <i class="fab fa-<%= network %>"></i>
                     </a>
-                  </li>
-                <% } %>
-              <% }) %>
-            </ul>
-          <% } else { %>
-            <ul class="footer__links">
-              <% footer.links_2.list.forEach(({ url, text }) => { %>
-                <li>
-                  <i class="fas fa-angle-right"></i>
-                  <a href="<%= url %>">
-                    <%= text %>
-                  </a>
-                </li>
-              <% }) %>
-            </ul>
-          <% } %>
-        </div>
-      </div>
-
-      <div class="col-12 col-xl-5 order-lg-first">
-        <h2 class="footer__title footer__store">
-          <%= footer.description.title || _.settings.name %>
-        </h2>
-        <p><%- footer.description.text || _.settings.description %></p>
-
-        <div class="mt-4 mb-3">
-          <p class="footer__payment-methods">
-            <% Object.keys(footer.payment_methods).forEach(method => { %>
-              <% if (footer.payment_methods[method]) { %>
-                <i class="pay-icon pay-icon--<%= method %>"></i>
+                  <% } %>
+                <% }) %>
               <% } %>
-            <% }) %>
-          </p>
-          <div class="footer__stamps">
-            <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="footer__credits">
-      <span>
-        <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
-      </span>
-      <button
-        id="go-to-top"
-        class="btn btn-primary ml-3"
-        type="button"
-        aria-label="<%= _.dictionary('goToTop') %>"
-      >
-        <i class="fas fa-chevron-up"></i>
-      </button>
-    </div>
-  </div>
+  </div>  
 </footer>
-
-<div class="ecom-credits">
-  <a href="https://e-com.plus" target="_blank" rel="noopener">
-    Powered by
-    <img
-      src="https://ecom.nyc3.digitaloceanspaces.com/brand/plus/198x43.png"
-      alt="E-Com Plus"
-    >
-  </a>
+<div class="d-flex align-items-center justify-content-between">
+  <div class="footer__credits px-4">
+    <span class="d-block text-center w100">
+      <%= footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>
+    </span>  
+  </div>
+  <div class="ecom-credits"><a style="display: inline-block;vertical-align: middle;margin-right: 15px;" href="https://www.alpix.dev?utm_source=debonair"><svg xmlns="http://www.w3.org/2000/svg" id="Camada_1" style="width: 26px; height: 20px;" viewBox="0 0 245.73 149.51" data-name="Camada 1"><defs><style>.cls-1{fill:#211915;}.cls-2{fill:url(#Gradiente_sem_nome_12);}</style><linearGradient id="Gradiente_sem_nome_12" gradientUnits="userSpaceOnUse" x1="240.57" y1="139.95" x2="198.5" y2="97.88"><stop stop-color="#9400d3" offset="0"></stop><stop stop-color="#40e0d0" offset="1"></stop></linearGradient></defs><title>Code By - www.alpix.dev</title><path class="cls-1" d="M 69.53 149.51 a 65.74 65.74 0 0 1 -35 -9.69 A 70.48 70.48 0 0 1 9.34 113.16 Q 0 96.2 0 74.48 q 0 -21 8.86 -37.86 A 69 69 0 0 1 33.39 9.9 Q 49.07 0 69.53 0 a 77.81 77.81 0 0 1 23.3 3.5 a 62.24 62.24 0 0 1 19.58 10 V 4.4 h 57.16 V 145.11 H 112.41 v -11 a 76.89 76.89 0 0 1 -20.68 11.54 A 64.76 64.76 0 0 1 69.53 149.51 Z m 17.59 -48.37 A 27 27 0 0 0 100.8 97.7 a 24.54 24.54 0 0 0 9.34 -9.41 a 27.11 27.11 0 0 0 3.37 -13.53 a 26.6 26.6 0 0 0 -3.44 -13.61 a 25.36 25.36 0 0 0 -9.34 -9.34 a 26.62 26.62 0 0 0 -13.61 -3.44 a 27 27 0 0 0 -13.6 3.44 A 25.37 25.37 0 0 0 64 61.22 a 26.25 26.25 0 0 0 -3.51 13.54 A 26.64 26.64 0 0 0 63.9 88.29 a 24.84 24.84 0 0 0 9.48 9.41 A 27.32 27.32 0 0 0 87.12 101.14 Z"></path><rect class="cls-2" x="188.56" y="87.95" width="57.17" height="57.17"></rect></svg> </a><a href="https://e-com.plus?utm_source=alpix" target="_blank" rel="noopener"><img src="https://ecom.nyc3.digitaloceanspaces.com/brand/plus/198x43.png" alt="E-Com Plus"></a></div>
 </div>
