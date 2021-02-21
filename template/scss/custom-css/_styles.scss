@@ -1,6 +1,6 @@
 // Add your custom CSS here.
 @media(min-width:1200px){
-    .container, .container-lg, .container-md, .container-sm, .container-xl{width:1230px;}
+    .container, .container-lg, .container-md, .container-sm, .container-xl{width:1200px;max-width:100%;}
     .header__toggler{display:none}
 }
 @import url('https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap');
@@ -106,6 +106,7 @@ footer .social a{
     justify-content: center;
     padding-top:10px;
     padding-bottom:10px;
+    border:0
 }
 .justify-content-between{justify-content: space-between;}
 .align-items-center{align-items:center}
@@ -202,4 +203,150 @@ footer .social a{
 }
 
 .header .social a{margin-left:5px;}
-.header__container{margin:0}
+.header__container{margin:0 auto;max-width:100%;}
+.header__container > .header__row,
+.header__container .header__nav{max-width:1200px;margin:0 auto;}
+.header__container > .row:last-child{background:#000;}
+
+body,
+article,
+main{background:#fff;}
+
+.page-title__head h1,
+.products-carousel__title,
+#product-description .lead{
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    width:100%;
+}
+.products-carousel__title{text-align:left;margin:30px 15px 30px 15px;padding-left: 0;}
+.products-carousel__title span{padding:0;}
+.products-carousel__title:before,
+#product-description .lead > a{display:none;}
+.breadcrumb,
+.breadcrumb *{
+    color: #000;
+    font-size: 12px;
+}
+.page-title__head,
+.page-title{margin-bottom:0}
+.retail-grid{margin-top:0;}
+
+article .search-engine__nav{
+    background:#fff;
+    color:#000;
+    font-size:12px;
+    padding:0!important;
+    margin:0 -15px;
+}
+article .search-engine__nav .search-engine__toggles > button,
+article .search-engine__nav .search-engine__toggles >  .dropdown button,
+article .search-engine__nav .search-engine__toggles >  .dropdown a{
+    font-size: 12px;
+    color: #000;
+}
+.product-card__prices,
+.product-card__name{
+    margin: 15px 0 5px 0;
+    font-size: 12px;
+    text-align: center;
+    height:auto;
+}
+.product-card__prices{margin-top:0;}
+.product-card__prices .prices__value,
+.product-card .prices__compare{font-size:12px;display:inline-block;margin:0 3px;}
+
+.product-card__buy{display:none!important}
+
+.product-card,
+.product-card:hover{
+    padding: 0;
+    box-shadow: unset;
+    margin-bottom: 45px!important;
+}
+.card-header *{color:#fff;}
+.card-header{
+    background: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 0!important;
+}
+aside{
+    border: 0!important;
+    border-radius: 0!important;
+}
+#search-engine .search-engine__filter > button{
+    text-transform:uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+#search-engine .search-engine__filter > button + div *{font-size:12px;}
+
+// .product-card__picture {
+//     position: absolute;
+//     display: block;
+//     flex: 0 0 100%;
+// }
+
+// .product-card__pictures img {
+//     height: 417px;
+//     max-height: unset;
+//     max-width: unset;
+//     -o-object-fit: cover;
+//     object-fit: cover;
+//     left: 50%;
+//     transform: translate(-50%);
+//     position: relative;
+// }
+
+.product-card__offer-stamp{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-weight: 300;
+    font-size: 10px;
+    top: 0;
+    left: 0;
+    right: auto;
+}
+
+.glide__arrows--outer .glide__arrow{
+    color: #000;
+    border-radius: 50%;
+    opacity: 1;
+    font-size:18px;
+}
+#product-actions .product__buy button .fas,
+#product-actions .share-network-whatsapp > span,
+#product-actions .product__payment,
+#product-actions .shipping-calculator{display:none!important}
+#product-actions .share i{filter:grayscale(1)}
+
+
+#product-actions .product__buy button{
+    display: block;
+    font-size: 22px;
+    letter-spacing: 1px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #41972b;
+    border: 0;
+}
+
+#product h1{
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
