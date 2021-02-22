@@ -1,4 +1,96 @@
 {
+  "fullbanner_d": "/img/uploads/5c3d0f52c109c7fbcde805aabbba95eb.gif",
+  "bt_m": "/img/uploads/821962ffd7f38991e7d5cede8f43f361.png",
+  "text2": "#USEDEBONAIR",
+  "text3": "#ESPECIAL DEBONAIR",
+  "bt_link": "#",
+  "list'": [
+    {
+      "image": "/img/uploads/91877e38100cc3b5b06d5b3bb82f0092.png",
+      "text": "#"
+    },
+    {
+      "image": "/img/uploads/5e3e7253cd77df473fbf0d75cd3c4ec0.png",
+      "text": "#"
+    },
+    {
+      "image": "/img/uploads/aa66024b06e06b9cfd3be26e26630acd.png",
+      "text": "#"
+    },
+    {
+      "image": "/img/uploads/c3412d45ceab5f4cf5da418ff05c4adb.png",
+      "text": "#"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/2931ddc87540f5bd51e36440f836b717.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/30b78a17834c65d41e605745b28b64b5.png"
+    },
+    {
+      "image": "/img/uploads/533461fdab04d9f34f82045156aa73c7.png",
+      "text": "#"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/28e310c5ca7c53fe9f27644ec330aa5c.png"
+    }
+  ],
+  "fullbanner_m": "/img/uploads/5c3d0f52c109c7fbcde805aabbba95eb.gif",
+  "bt_title": "FELIZ NATAL",
+  "text": "/",
+  "list2": [
+    {
+      "text": "#",
+      "image": "/img/uploads/59ef13a2269827bf9fd163da836c2d20.gif"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/0f3ab76cdcf03a0fc81a0beba78dac84.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/f6dadb402c29fc87b8b6aafdcaddea66.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/f4d10e9a0e4cac28d2c806db5e8b89b1.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/8986fcb62cbf80db22f2a3fbd4d5e843.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/a6e3d392918b7af61eaefaa84405795e.gif"
+    }
+  ],
+  "list3": [
+    {
+      "text": "#",
+      "image": "/img/uploads/3adf10e0f5adc252ea66ff3ab119d5fa.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/42a1463b1a1e20453ac22f2fbfb1c57a.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/626b5776435b5679bca695686b7fc97e.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/468b3d3c5a42d2bdb1589fe76c20b593.png"
+    },
+    {
+      "text": "#",
+      "image": "/img/uploads/fcdedfebb48177f168f5672d0306a0f9.png"
+    }
+  ],
+  "bt_d": "/img/uploads/821962ffd7f38991e7d5cede8f43f361.png",
+  "fb_link": "#",
   "list": [
     {
       "image": "/img/uploads/91877e38100cc3b5b06d5b3bb82f0092.png",
@@ -32,6 +124,5 @@
       "image": "/img/uploads/28e310c5ca7c53fe9f27644ec330aa5c.png",
       "text": "/"
     }
-  ],
-  "text": "/"
+  ]
 }
