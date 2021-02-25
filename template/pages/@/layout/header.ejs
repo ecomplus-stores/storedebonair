@@ -52,36 +52,20 @@ if (header.categories_list) {
 }
 
 const tarja = _.cms('a_tarja_topo') || {}
-console.log(tarja)
+
 %>
 
 <div id="overlay" class="fade"></div>
 
 
-<% if (tarja.lista){ %>
-  <% tarja.lista.itens_obj.forEach(({ txt__, img__ }) => { %>
-    <li class="ml-3"><a href="<%= txt__ %>"><%= img__ %></a></li>
-  <% }) %>
-<% } %>
-<div class="top-bar">
-  <% if (header.marketing_stripe) { %>
-    <% if (header.marketing_stripe.text) { %>
-      <% if (header.marketing_stripe.link) { %>
-        <a
-          class="top-bar__countdown"
-          style="<%= marketingStripeStyle %>"
-          href="<%= header.marketing_stripe.link %>"
-        >
-          <%= header.marketing_stripe.text %>
-        </a>
-      <% } else { %>
-        <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
-          <%= header.marketing_stripe.text %>
-        </div>
-      <% } %>
-    <% } %>
+
+<div class="top-bar d-flex justify-content-between text-center py-2" style="background-color:<%= tarja.stripe_color %>; color:<%= tarja.text_color %>">
+  <% if (tarja.list){ %>
+    <% tarja.list.forEach(({ item }) => { %>
+      <div class="col-auto"><img src="<%= item.image %>"/><%= item.text %></div>
+    <% }) %>
   <% } %>
-      </div>
+</div>
 <header class="header" id="header">
   <div class="header__container container-fluid">
     <div class="header__row row align-items-center py-md-2">

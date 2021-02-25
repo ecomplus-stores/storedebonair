@@ -1,6 +1,149 @@
 <article id="content" class="page page--<%= _.pageName %>">
   <div class="sections pb-1 pb-sm-2 pb-lg-4">
     <%
+    const apx = _.cms('banners_1') || {}
+    if (_.pageName == "home"){ 
+    %>
+    
+    <div class="apx_fullbanner">
+      <a href="<%= apx.fb_link %>">
+        <picture class="img-fluid">
+          <source srcset="<%= apx.fullbanner_d %>" media="(min-width: 576px)">
+          <source srcset="<%= apx.fullbanner_m %>" media="(min-width: 100px)">
+          <img src="<%= apx.fullbanner_d %>" alt="Banner">
+        </picture>        
+      </a>
+    </div>
+    <div class="container">
+      <div id="debonair-home">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="<%= apx.list[0].text %>"> <img src="<%= apx.list[0].image %>"> </a>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="<%= apx.list[1].text %>"> <img src="<%= apx.list[1].image %>"> </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="<%= apx.list[3].text %>"> <img src="<%= apx.list[3].image %>"> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="<%= apx.list[2].text %>"> <img src="<%= apx.list[2].image %>"> </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="<%= apx.list[4].text %>"> <img src="<%= apx.list[4].image %>"> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <a href="<%= apx.list[5].text %>"> <img src="<%= apx.list[5].image %>"> </a>
+          </div>
+          <div class="col-md-4">
+            <a href="<%= apx.list[6].text %>"> <img src="<%= apx.list[6].image %>"> </a>
+          </div>
+          <div class="col-md-4">
+            <a href="<%= apx.list[7].text %>"> <img src="<%= apx.list[7].image %>"> </a>
+          </div>
+        </div>
+        <h2 class="block-header">
+          <span><%= apx.text2 %></span>
+        </h2>
+        <div class="row">
+          <div class="col-md-3">
+            <a href="<%= apx.list2[0].text %>"> <img src="<%= apx.list2[0].image %>"> </a>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <a href="<%= apx.list2[1].text %>"> <img src="<%= apx.list2[1].image %>"> </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <a href="<%= apx.list2[2].text %>"> <img src="<%= apx.list2[2].image %>"> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="row">
+              <div class="col-6 col-md-12">
+                <a href="<%= apx.list2[3].text %>"> <img src="<%= apx.list2[3].image %>"> </a>
+              </div>
+              <div class="col-6 col-md-12">
+                <a href="<%= apx.list2[4].text %>"> <img src="<%= apx.list2[4].image %>"> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <a href="<%= apx.list2[5].text %>"> <img src="<%= apx.list2[5].image %>"> </a>
+          </div>
+        </div>
+        <h2 class="block-header">
+          <span><%= apx.bt_title %></span>
+        </h2>
+        <div class="row">
+          <div class="col-12">
+            
+            <a href="/cart/search/d0bb7613914df64d480542b184bc81a3/0">
+              <picture class="img-fluid">
+                <source srcset="<%= apx.bt_d %>" media="(min-width: 576px)">
+                <source srcset="<%= apx.bt_m %>" media="(min-width: 100px)">
+                <img src="<%= apx.bt_d %>" alt="Banner">
+              </picture>     
+            </a>
+          </div>
+        </div>
+        <h2 class="block-header">
+          <span><%= apx.text3 %></span>
+        </h2>
+        <div class="row">
+          <div class="col-md-4">
+            <a href="<%= apx.list3[0].text %>"> <img src="<%= apx.list3[0].image %>"> </a>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <a href="<%= apx.list3[1].text %>"> <img src="<%= apx.list3[1].image %>"> </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <a href="<%= apx.list3[2].text %>"> <img src="<%= apx.list3[2].image %>"> </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-12">
+                <a href="<%= apx.list3[3].text %>"> <img src="<%= apx.list3[3].image %>"> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row m-hide">
+          <div class="col-md-12">
+            <a href="<%= apx.list3[4].text %>"> <img src="<%= apx.list3[4].image %>"> </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <%
+    }
     // load page sections and render each one
     const { sections } = _.state
     if (Array.isArray(sections)) {

@@ -13,7 +13,7 @@
         {
           "name": "a_tarja_topo",
           "label": "Tarja topo",
-          "file": "content/a_tarta_topo.json",
+          "file": "content/a_tarja_topo.json",
           "fields": [
             {
               "label": "Cor da tarja",
@@ -47,6 +47,109 @@
                       "widget": "image"
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "secao_1",
+          "label": "Seção de Banners",
+          "file": "content/banners_1.json",
+          "fields": [
+            {
+              "label": "Full Banner (Link)",
+              "name": "fb_link",
+              "widget": "string"
+            },
+            {
+              "label": "Full Banner (Desktop)",
+              "name": "fullbanner_d",
+              "widget": "image"
+            },
+            {
+              "label": "Full Banner (Mobile)",
+              "name": "fullbanner_m",
+              "widget": "image"
+            },
+            {
+              "label":"Seção de Banners #1",
+              "name":"list",
+              "widget" : "list",
+              "fields" : [
+                {
+                  "label": "Link",
+                  "name": "text",
+                  "widget": "string"
+                },
+                {
+                  "label": "Imagem",
+                  "name": "image",
+                  "widget": "image"
+                }
+              ]
+            },
+            {
+              "label": "Título da Seção #2",
+              "name": "text2",
+              "widget": "string"
+            },           
+            {
+              "label":"Seção de Banners #2",
+              "name":"list2",
+              "widget" : "list",
+              "fields" : [
+                {
+                  "label": "Link",
+                  "name": "text",
+                  "widget": "string"
+                },
+                {
+                  "label": "Imagem",
+                  "name": "image",
+                  "widget": "image"
+                }
+              ]
+            },
+            {
+              "label": "Título Banner Tarja",
+              "name": "bt_title",
+              "widget": "string"
+            },
+            {
+              "label": "Banner Tarja (Link)",
+              "name": "bt_link",
+              "widget": "string"
+            },
+            {
+              "label": "Banner Tarja (Desktop)",
+              "name": "bt_d",
+              "widget": "image"
+            },
+            {
+              "label": "Banner Tarja (Mobile)",
+              "name": "bt_m",
+              "widget": "image"
+            },
+            {
+              "label": "Título da Seção #3",
+              "name": "text3",
+              "widget": "string"
+            },           
+            {
+              "label":"Seção de Banners #3",
+              "name":"list3",
+              "widget" : "list",
+              "fields" : [
+                {
+                  "label": "Link",
+                  "name": "text",
+                  "widget": "string"
+                },
+                {
+                  "label": "Imagem",
+                  "name": "image",
+                  "widget": "image"
                 }
               ]
             }
