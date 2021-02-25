@@ -1,10 +1,5 @@
 {
   "title": "Contato",
-  "body": "Após o formulário ser preenchido o tempo de resposta é de até 48 horas úteis. Caso tenha algum problema com o formulário o contato pode ser realizado direto pelo e-mail contato@debonair.com.br",
-  "sections": [
-    {
-      "type": "custom-html",
-      "html": "\n\t\t\t\t\t\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"sender_name\"> Nome }}</label>\n\t\t\t\t\t\t\t<input type=\"text\" name=\"sender_name\" value=\"\" class=\"form-control\" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"sender_email\">{{ Email }</label>\n\t\t\t\t\t\t\t<input type=\"text\" name=\"sender_email\" value=\"\" class=\"form-control\" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<label for=\"message\">{{  Mensagem </label>\n\t\t\t\t\t\t\t<textarea name=\"message\" cols=\"80\" rows=\"10\" class=\"form-control\"></textarea>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"form-group\">\n\t\t\t\t\t\t\t<input type=\"submit\" class=\"btn btn-primary btn-bck\" value=\"{{ ENVIAR />\n\t\t\t\t\t\t</div>\n\t\t\n\t\t\t\t\t{{ form_close() }}\n\t\t\t\t"
-    }
-  ]
+  "body": "Após o formulário ser preenchido o tempo de resposta é de até 48 horas úteis. Caso tenha algum problema com o formulário o contato pode ser realizado direto pelo e-mail contato@debonair.com.br\n\n<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSeUd6lfocsvvLotT-mlPC3n3FSmpHsXMV5JpOupeoJk6CFhoA/viewform?embedded=true\" width=\"640\" height=\"725\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Carregando…</iframe>",
+  "sections": []
 }
