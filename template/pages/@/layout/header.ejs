@@ -69,7 +69,7 @@ const tarja = _.cms('a_tarja_topo') || {}
 <header class="header" id="header">
   <div class="header__container container-fluid">
     <div class="header__row row align-items-center py-md-2">
-      <div class="col-auto p-0 d-md-none">
+      <div class="col-3 p-0 d-md-none">
         <button
           class="btn header__toggler"
           type="button"
@@ -85,7 +85,7 @@ const tarja = _.cms('a_tarja_topo') || {}
         </button>
       </div>
 
-      <div class="col col-lg-auto pl-1 pl-md-2 pl-lg-3">
+      <div class="col-6 col-lg-auto pl-1 pl-md-2 pl-lg-3">
         <a href="/">
           <% if (logo && logo.url) { %>
             <img
@@ -99,12 +99,11 @@ const tarja = _.cms('a_tarja_topo') || {}
           <% } %>
         </a>
       </div>
-      <div class="col">
+      <div class="col-3 col-md">
         <div class="row align-items-center d-none d-md-flex mb-2">
           <div class="col">
-            <span id="top-user">
-              
-              <img src="/img/ico_bigode.png"/>&nbsp;&nbsp;Olá [Visitante], seja bem vindo!. Faça seu <a href="https://www.debonair.com.br/secure/login">login</a> ou <a href="https://www.debonair.com.br/secure/register">cadastre-se</a>. Boas compras!
+            <span id="top-user">              
+              <img src="/img/ico_bigode.png"/>&nbsp;&nbsp;Olá <span id="username_">Visitante</span>, seja bem vindo!. <span id="functions_">Faça seu <a href="https://www.debonair.com.br/secure/login">login</a> ou <a href="https://www.debonair.com.br/secure/register">cadastre-se</a>. Boas compras!</span>
             </span>
           </div>
           <div class="col-auto">
@@ -130,14 +129,14 @@ const tarja = _.cms('a_tarja_topo') || {}
             </div>
           </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row user-mobile align-items-center">
           <div class="order-lg-last col-auto p-0">
             <div
               class="header__buttons d-flex align-items-center"
               role="group"
               aria-label="<%= _.dictionary('myAccount') %>"
             >
-              <button
+              <!-- <button
                 class="d-lg-none btn btn-lg"
                 id="mobile-search-btn"
                 type="button"
@@ -149,7 +148,7 @@ const tarja = _.cms('a_tarja_topo') || {}
                 title="<%= _.dictionary('searchProducts') %>"
               >
                 Buscar
-              </button>
+              </button> -->
     
               <a
                 id="user-button"
@@ -193,7 +192,7 @@ const tarja = _.cms('a_tarja_topo') || {}
             const searchColSize = !isCategoriesNavFull && categories.length ? '-3' : ''
             %>
             <div
-              class="d-none d-lg-block col-12 col-lg<%= searchColSize %> collapse show"
+              class="d-none d-lg-block col-12 col-lg<%= searchColSize %>"
               id="search-bar"
             >
               <form
@@ -243,7 +242,6 @@ const tarja = _.cms('a_tarja_topo') || {}
           <% } %>
         </div>
       </div>
-
     </div>
     <div class="row">
       <% if (categories && categories.length) { %>

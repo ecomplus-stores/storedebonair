@@ -393,3 +393,73 @@ aside{
 .order-info__toggle {
 display: none !important;
 }
+
+
+#search-mobile #search-bar{padding:0 0 15px 0;}
+
+
+@media(max-width:990px){
+    .apx_fullbanner{margin-bottom:15px}
+    .top-bar{display:none!important}
+    .header__logo{
+        max-height: 65px;
+        margin: 0 auto;
+        display: block;
+    }
+    .user-mobile .header__buttons #cart-button{padding-right:0}
+    .user-mobile{justify-content: flex-end;}
+    .header__toggler-icon{
+        color: #000;
+        font-size: 24px;
+    }
+
+    .menu__item{
+        font-size: 13px;
+        display: inline-block;
+        margin: 0;
+        font-weight: 700;
+        border: 0;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 10px 30px;
+    } 
+
+    aside#menu{
+        max-width:80%;
+        overflow: visible;
+    }
+    aside#menu .menu__btn--close{
+        color: #fff;
+        background: #000;
+        border-radius: 0;
+        border: 0;
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+        line-height: 40px;
+        padding: 0;
+        right: -40px;
+    }
+
+    #search-bar [type=search]{vertical-align:top}
+
+    #search-mobile{padding: 0 5px 0 7px;}
+    .menu__list{padding:0}
+
+    .header__search{
+        border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    }
+
+    #debonair-home img{max-width:100%;}
+    #debonair-home a{margin-bottom:15px;}
+
+    #user-mobile{
+        padding: 10px 15px 5px 15px;
+    }
+    #functions_{display:block;font-size:10px;margin-top:5px;}
+    #top-user{font-size:12px;}
+
+
+}
