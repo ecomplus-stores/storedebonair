@@ -248,6 +248,9 @@ const tarja = _.cms('a_tarja_topo') || {}
       <% if (categories && categories.length) { %>
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
+            <a href="/">
+              <img src="/img/ico_home.png"/>
+            </a>
             <% categories.forEach(({ slug, name }) => { %>
               <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
                 <%= ` ${name} ` %>
