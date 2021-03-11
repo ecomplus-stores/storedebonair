@@ -145,7 +145,8 @@ footer .social a{
     background: #000;
     margin: 0 -15px;
 }
-.header__nav > a{
+.header__nav > a,
+.header__nav > ul > li > a{
     text-transform: uppercase;
     font-size: 13px;
     padding: 15px 30px;
@@ -611,6 +612,47 @@ button.variations__option--selected:not(:disabled){
     vertical-align: middle;
     margin: 0 10px 20px 10px;
 }
+.header__nav > ul{
+    list-style-type:none;
+    display:flex;
+    margin:0;
+    justify-content:space-between;
+}
+.header__nav > ul > li.dropdown:hover a,
+.header__nav > ul > li > a:hover{
+    background-color:#393939;
+    border-radius:0;
+}
+.header__nav > ul > li.dropdown{position:relative;}
+.header__nav > ul > li.dropdown .dropdown-menu a{
+    color:#fff;
+    font-size: 11px;
+    letter-spacing: 0;
+    padding: 10px 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.header__nav > ul > li.dropdown .dropdown-menu{
+    margin: 0px 0 0 0;
+    border-radius: 0;
+    background: #393939;
+    box-shadow: unset;
+    outline: none;
+    padding: 0;
+}
+.header__nav > ul > li.dropdown:hover .dropdown-menu{
+    display:block;
+}
+.header__nav > ul > li.dropdown:after{
+    content: "";
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: 10px;
+    border-top: 4px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
 @media(max-width:990px){
     .debonair-prices{flex-wrap:wrap}
     .debonair-prices > *{

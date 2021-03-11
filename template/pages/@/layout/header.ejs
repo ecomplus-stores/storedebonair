@@ -245,17 +245,40 @@ const tarja = _.cms('a_tarja_topo') || {}
       </div>
     </div>
     <div class="row">
+      <% 
+        const categoryParents = _.lodash.groupBy(_.categories, ({ parent }) => {
+          return !parent || !parent.slug ? '_' : parent.slug
+        })
+        const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
+      %>
       <% if (categories && categories.length) { %>
         <div class="d-none d-lg-block <%= isCategoriesNavFull ? 'col-12 order-lg-last' : 'col' %>">
           <nav class="header__nav<%= isCategoriesNavFull ? ' header__nav--full' : '' %>">
-            <a href="/">
-              <img src="/img/ico_home.png"/>
-            </a>
-            <% categories.forEach(({ slug, name }) => { %>
-              <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
-                <%= ` ${name} ` %>
-              </a>
-            <% }) %>
+            <ul>
+              <li>
+                <a href="/">
+                  <img src="/img/ico_home.png"/>
+                </a>
+              </li>
+              <% categories.forEach(({ slug, name, _id }) => { %>
+                <li class="<%- categoryParents[slug] ? 'dropdown' : '' %>">
+                  <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
+                    <%= ` ${name} ` %>
+                  </a>
+                  <% if (categoryParents[slug]) { %>
+                    <ul class="dropdown-menu row mx-0">                    
+                      <% categoryParents[slug].forEach(subcategory => { %>
+                        <li>
+                          <a href="/<%= subcategory.slug %>">
+                            <%= subcategory.name %>
+                          </a>                     
+                        </li>
+                      <% }) %>                   
+                    </ul>
+                  <% } %>
+                </li>
+              <% }) %>
+            </ul>
           </nav>
         </div>
       <% } %>
