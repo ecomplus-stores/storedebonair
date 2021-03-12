@@ -262,7 +262,7 @@ const tarja = _.cms('a_tarja_topo') || {}
               </li>
               <% categories.forEach(({ slug, name, _id }) => { %>
                 <li class="<%- categoryParents[slug] ? 'dropdown' : '' %>">
-                  <a href="javascript:;" onclick="toggleSidenav('<%= slug %>')">
+                  <a href="<%= slug %>" >
                     <%= ` ${name} ` %>
                   </a>
                   <% if (categoryParents[slug]) { %>
