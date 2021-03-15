@@ -86,6 +86,30 @@
           </slot>
 
           <template v-else>
+            <slot name="prices">
+              <p class="product__prices">
+                <a-prices
+                  :product="{ ...body, ...selectedVariation }"
+                  :is-literal="true"
+                  :is-big="true"
+                  @fix-price="price => fixedPrice = price"
+                />
+
+                <slot
+                  name="discount-tag"
+                  v-bind="{ discount }"
+                >
+                  <span
+                    v-if="discount > 0"
+                    class="product__discount"
+                  >
+                    {{ i19discountOf }}
+                    <strong>{{ discount }}%</strong>
+                  </span>
+                </slot>
+              </p>              
+            </slot>
+            
             <slot
               name="variations"
               v-if="hasVariations"
@@ -104,29 +128,6 @@
             </slot>
             
             <div class="d-flex row-flex debonair-prices">
-              <slot name="prices">
-                <p class="product__prices">
-                  <a-prices
-                    :product="{ ...body, ...selectedVariation }"
-                    :is-literal="true"
-                    :is-big="true"
-                    @fix-price="price => fixedPrice = price"
-                  />
-
-                  <slot
-                    name="discount-tag"
-                    v-bind="{ discount }"
-                  >
-                    <span
-                      v-if="discount > 0"
-                      class="product__discount"
-                    >
-                      {{ i19discountOf }}
-                      <strong>{{ discount }}%</strong>
-                    </span>
-                  </slot>
-                </p>              
-              </slot>
               <div
               v-if="isKit"
               class="product__kit"
@@ -135,9 +136,7 @@
               <slot
                 name="kit"
                 v-bind="{ kitItems }"
-              >
-
-              
+              >             
 
                 <transition enter-active-class="animated fadeInUp">
                   <quantity-selector
