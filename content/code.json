@@ -1,5 +1,5 @@
 {
   "css": "",
   "html_head": "",
-  "html_body": ""
+  "html_body": "<script>window.ecomPaymentApps = [1245, 111223]</script>"
 }
