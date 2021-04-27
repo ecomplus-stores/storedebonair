@@ -4,7 +4,7 @@
   "text2": "#USEDEBONAIR",
   "text3": "#ESPECIAL DEBONAIR",
   "bt_link": "/search?term=camiseta",
-  "fullbanner_m": "/img/uploads/5c3d0f52c109c7fbcde805aabbba95eb.gif",
+  "fullbanner_m": "/img/uploads/especialtenis_1200x375px.png",
   "bt_title": "ESPECIAL CAMISETAS",
   "text": "/",
   "list2": [
@@ -35,24 +35,24 @@
   ],
   "list3": [
     {
-      "text": "#",
-      "image": "/img/uploads/3adf10e0f5adc252ea66ff3ab119d5fa.png"
+      "text": "/calcas",
+      "image": "/img/uploads/calca01_380x418px.png"
+    },
+    {
+      "text": "search?term=boné",
+      "image": "/img/uploads/bone_380x190px.png"
+    },
+    {
+      "text": "/bermudas",
+      "image": "/img/uploads/bermuda01t_380x190px.png"
+    },
+    {
+      "text": "/calcas",
+      "image": "/img/uploads/banner01_278x356px.png"
     },
     {
       "text": "#",
-      "image": "/img/uploads/42a1463b1a1e20453ac22f2fbfb1c57a.png"
-    },
-    {
-      "text": "#",
-      "image": "/img/uploads/626b5776435b5679bca695686b7fc97e.png"
-    },
-    {
-      "text": "#",
-      "image": "/img/uploads/468b3d3c5a42d2bdb1589fe76c20b593.png"
-    },
-    {
-      "text": "#",
-      "image": "/img/uploads/fcdedfebb48177f168f5672d0306a0f9.png"
+      "image": "/img/uploads/outlet_1200x125px.png"
     }
   ],
   "bt_d": "/img/uploads/especialcamisetas_1200x375px.png",
