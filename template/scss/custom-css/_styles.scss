@@ -332,6 +332,7 @@ aside{
 #product-actions .share i{filter:grayscale(1)}
 
 
+
 #product-actions .product__buy button{
     display: block;
     font-size: 22px;
@@ -344,6 +345,22 @@ aside{
     background: #41972b;
     border: 0;
 }
+
+#product-actions .product__buy button.btn-secondary{
+    background: #393939;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 8px 0;
+    font-size:14px;
+    letter-spacing:0;
+}
+
 
 #product h1{
     font-size: 30px;
@@ -883,3 +900,33 @@ button.variations__option--selected:not(:disabled){
 .cart .cart__list .cart-item__prices{font-weight:600}
 .cart .cart__list .cart-item__prices .cart-item__price-un{}
 .shipping-line + small{display:none;}
+
+
+.apx_form{}
+.apx_form label{
+    font-size:14px;
+    display:block;
+    color:#000
+}
+.apx_form input,
+.apx_form textarea{
+    min-height:40px;
+    width:100%;
+    display:block;
+    margin-bottom:1rem;
+    border-radius:0px;
+    border:1px solid #212121;
+    padding:.5rem;
+}
+.apx_form button{
+    background: #000000;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 0;
+    border-radius: 0px;
+    min-height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

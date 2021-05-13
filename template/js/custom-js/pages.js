@@ -18,3 +18,30 @@ $('body').click(function(e){
         $('#instant-search .search__status .close').click();
     }
 });
+
+$('.apx_form').submit(function(e){
+    e.preventDefault();
+    var mail = [];
+    mail.form = $(this);
+    mail.destination = $(this).find('[name="destination]').val() != undefined ? $(this).find('input[name="destination"]').val() : "contato@debonair.com.br";
+    mail.subject = $(this).find('input[name="subject"]').val() != undefined ? $(this).find('input[name="subject"]').val() : "Formulário de Contato";
+    mail.body = "";
+
+    mail.form.find('input:not([type="hidden"]), textarea').each(function(){
+        mail.body = mail.body + $(this).closest('div').find('label').text() + ': ' + $(this).val() + '<br>';
+    });
+
+    axios.post('https://us-central1-marketingtools-ecomplus.cloudfunctions.net/app/alpix/apx_sendmail', {
+        storeId : storefront.settings.store_id,
+        destination : mail.destination,
+        subject : mail.subject,
+        content : mail.body
+    })
+    .then(function(response){
+        alert(response.data.msg)
+        if(!response.data.error){
+            mail.form.find('input[type="text"],input[type="email"],textarea,input[type="tel"]').val('')
+        }
+    })
+    
+});

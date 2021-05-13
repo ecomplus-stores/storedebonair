@@ -183,6 +183,21 @@
                         </button>
                       </slot>
                     </span>
+                    <span @click="buy">
+                      <slot
+                        name="buy"
+                        v-bind="{ isOnCart }"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-lg btn-secondary"
+                          :disabled="hasClickedBuy && !isOnCart"
+                        >
+                          Adicionar ao carrinho                          
+                        </button>
+                      </slot>
+                      
+                    </span>
                     
                   </div>
                   <slot name="share">
