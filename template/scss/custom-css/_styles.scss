@@ -901,7 +901,16 @@ button.variations__option--selected:not(:disabled){
 .cart .cart__list .cart-item__prices .cart-item__price-un{}
 .shipping-line + small{display:none;}
 
-
+.minicart__aside .minicart__btn-checkout {
+  display: none;
+}
+.minicart__aside .minicart__btn-cart {
+  font-size: 0
+}
+.minicart__aside .minicart__btn-cart:after {
+  font-size: 1rem !important;
+  content: "Finalizar Compra"
+}
 .apx_form{}
 .apx_form label{
     font-size:14px;
