@@ -26,6 +26,7 @@ $('.apx_form').submit(function(e){
     mail.destination = $(this).find('[name="destination]').val() != undefined ? $(this).find('input[name="destination"]').val() : "contato@debonair.com.br";
     mail.subject = $(this).find('input[name="subject"]').val() != undefined ? $(this).find('input[name="subject"]').val() : "Formulário de Contato";
     mail.body = "";
+    mail.replyTo = $(this).find('input[name="email"]').val();
 
     mail.form.find('input:not([type="hidden"]), textarea').each(function(){
         mail.body = mail.body + $(this).closest('div').find('label').text() + ': ' + $(this).val() + '<br>';
@@ -35,7 +36,8 @@ $('.apx_form').submit(function(e){
         storeId : storefront.settings.store_id,
         destination : mail.destination,
         subject : mail.subject,
-        content : mail.body
+        content : mail.body,
+        reply_mail: mail.replyTo
     })
     .then(function(response){
         alert(response.data.msg)
