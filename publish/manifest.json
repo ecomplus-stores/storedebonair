@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.0934626a838ade012d6e6c04d12f328a.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.1be1485277fecf3cd02762143a84da21.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.5504d522d1ec3b86db476370c1828eb8.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.28300e837711bc5350ab46a9c8415286.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.eb4b3648124a15bbdc3ebeaedfc46e4b.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Debonair",
+  "short_name": "Debonair",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "storedebonair",
+  "background_color": "#ffffff",
+  "theme_color": "#222831"
+}
