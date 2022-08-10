@@ -1,9 +1,9 @@
 {
   "fullbanner_d": "/img/uploads/banner_usedebonair_01.gif",
-  "bt_m": "/img/uploads/especialcamisetas_1200x375px.png",
+  "bt_m": "/img/uploads/especialtenis_1200x375px.png",
   "text2": "#USEDEBONAIR",
   "text3": "#ESPECIAL DEBONAIR",
-  "bt_link": "/search?term=camiseta",
+  "bt_link": "/tenis",
   "fullbanner_m": "/img/uploads/banner_usedebonair_01.gif",
   "bt_title": "ESPECIAL CAMISETAS",
   "text": "/",
@@ -55,7 +55,7 @@
       "image": "/img/uploads/outlet_1200x125px.png"
     }
   ],
-  "bt_d": "/img/uploads/especialcamisetas_1200x375px.png",
+  "bt_d": "/img/uploads/especialtenis_1200x375px.png",
   "fb_link": "#",
   "list": [
     {
