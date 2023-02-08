@@ -16,6 +16,10 @@
       {
         "title": "Login",
         "link": "/segure/login"
+      },
+      {
+        "title": "Cadastre-se",
+        "link": "/secure/register"
       }
     ],
     "phone_wpp": false,
