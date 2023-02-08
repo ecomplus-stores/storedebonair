@@ -15,11 +15,11 @@
       },
       {
         "title": "Login",
-        "link": "/segure/login"
+        "link": "/app/#/account/"
       },
       {
         "title": "Cadastre-se",
-        "link": "/secure/register"
+        "link": "/app/#/account/"
       }
     ],
     "phone_wpp": false,
