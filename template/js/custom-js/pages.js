@@ -11,7 +11,7 @@ if(ecomPassport.getCustomerName() != ""){
     $('#functions_').html('Acesse sua <a href="/app/#/account/">conta</a> ou veja seus <a href="href="/app/#/account/orders">pedidos</a>.')
 }
 $('.header__search-input').keyup(function(){
-    $('body .search__input').val($(this).val()).[0].dispatchEvent(new Event('input'));
+    $('body .search__input').val($(this).val())[0].dispatchEvent(new Event('input'));
 });
 $('body').click(function(e){
     if($(e.target).closest('.header__search').length == 0){
