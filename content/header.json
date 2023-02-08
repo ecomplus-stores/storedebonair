@@ -12,6 +12,10 @@
       {
         "title": "Ajuda",
         "link": "/pages/como-comprar"
+      },
+      {
+        "title": "Login",
+        "link": "/segure/login"
       }
     ],
     "phone_wpp": false,
