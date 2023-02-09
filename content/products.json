@@ -1,15 +1,15 @@
 {
   "sections": [
     {
-      "type": "product-description",
-      "enabled": true
-    },
-    {
       "type": "product-block",
       "enabled": true
     },
     {
       "type": "breadcrumbs",
+      "enabled": true
+    },
+    {
+      "type": "product-description",
       "enabled": true
     },
     {
