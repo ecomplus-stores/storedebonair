@@ -939,3 +939,10 @@ button.variations__option--selected:not(:disabled){
     text-transform: uppercase;
     font-weight: bold;
 }
+.product-card__prices .prices__value {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 3px;
+    margin-top: 0px;
+  margin-top: -30px;
+}
