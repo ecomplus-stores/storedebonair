@@ -270,7 +270,7 @@ article .search-engine__nav .search-engine__toggles >  .dropdown a{
 .product-card:hover{
     padding: 0;
     box-shadow: unset;
-    margin-bottom: 45px!important;
+    // margin-bottom: 45px!important;
 }
 .card-header *{color:#fff;}
 .card-header{
@@ -939,10 +939,6 @@ button.variations__option--selected:not(:disabled){
     text-transform: uppercase;
     font-weight: bold;
 }
-.product-card__prices .prices__value {
-  display: inline-block;
-  font-size: 12px;
-  margin: 0 3px;
-    margin-top: 0px;
-  margin-top: -30px;
+.product-card__prices {
+    justify-content: flex-start;
 }
